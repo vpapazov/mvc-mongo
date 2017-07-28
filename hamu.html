@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+  <head>
+    <title>Hammurabi Game</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+	<SCRIPT src="game.js" LANGUAGE="JavaScript" TYPE="text/javascript">
+</SCRIPT>
+
+  </head>
+
+  <body>
+
+    <div class="bodytable">
+      <div class="titlecell">
+	<table width="100%"><tr>
+	  <td>Hammurabi Game</td>
+	</tr></table>
+
+      </div>
+      <div class="maincell">
+
+<hr>
+
+
+
+<form NAME="form1">
+<center>
+  <textarea name="commentwin" COLS="60" ROWS="20">
+    HAMURABI -
+
+    Where you govern the ancient kingdom of Sumeria.
+    The object is to keep the kingdom growing.
+
+    Click "start" to begin the game...
+
+</textarea><br>
+
+
+<table>
+<tr>
+<th colspan="2">Data for this year<hr></th>
+<th>&nbsp;</th>
+<th colspan="2">Your decisions<hr></th>
+</tr>
+  <tr>
+    <td align="RIGHT">
+	Acres of land:
+    </td>
+    <td>
+      <input TYPE="text" name="acrewin" SIZE="8" MAXLENGTH="7" disabled>
+    </td>
+    <td>&nbsp;</td>
+    <td align="LEFT">
+	How many acres do you wish to<br> trade?
+      <input TYPE="radio" name="tradetype" value="buy" checked onClick="updateTrade(this.form);"> buy
+      <input TYPE="radio" name="tradetype" value="sell" onClick="updateTrade(this.form);"> sell
+    </td>
+    <td>
+      <input TYPE="text" name="tradeamount" SIZE="8" MAXLENGTH="7" onChange="updateTrade(this.form);">
+    </td>
+  </tr>
+  <tr>
+    <td align="RIGHT">
+      Population:
+    </td>
+    <td>
+      <input TYPE="text" name="popwin" SIZE="8" MAXLENGTH="7" disabled></td>
+    </td>
+    <td>
+    </td>
+    <td align="LEFT">
+	How many bushels do you wish to<br> feed your people?
+    </td>
+    <td>
+      <input TYPE="text" name="foodamount" SIZE="8" MAXLENGTH="7" onChange="updateFood(this.form);">
+    </td>
+  </tr>
+  <tr>
+    <td align="RIGHT">
+      Stored grain:
+    </td>
+    <td>
+      <input TYPE="text" name="storewin" SIZE="8" MAXLENGTH="7" disabled>
+    </td>
+    <td>
+    </td>
+    <td align="LEFT">
+	How many acres do you wish to<br> plant with seed?
+    </td>
+    <td>
+      <input TYPE="text" name="plantamount" SIZE="8" MAXLENGTH="7" onChange="updatePlant(this.form);">
+    </td>
+  </tr>
+  <tr>
+    <td align="RIGHT">
+     Price of land (bushels/acre):
+    </td>
+    <td>
+      <input TYPE="text" name="landpwin" SIZE="8" MAXLENGTH="7" disabled>
+    </td>
+    <td></td>
+    <td colspan="2" align="center">
+      <input TYPE="button" NAME="Restart" VALUE="Restart" onClick="restart(this.form);">
+      &nbsp;&nbsp;
+      <input TYPE="button" NAME="GO" VALUE="OK" onClick="go(this.form);">
+    </td>
+  </tr>
+</table>
+
+              </form>
+<p>
+  <hr>
+</center>
+
+<h2>Instructions</h2>
+How to use the simulator:<p>
+Each year select "buy" or "sell" (for land), and various quantities. Click "OK" to advance to the next year <p>
+To reset the simulation, click "Restart".<p>
+The parameters of the simulation are deliberately omitted ... good luck.<p>
+
+      </div> <!-- maincell -->
+      <div class="footercell">
+      </div>  <!-- footercell -->
+    </div>  <!-- bodytable -->
+  </body>
+  </html>
